@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+body{
+    background-color: #313131;
+    color: bisque;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.form{
+    margin: 50px auto;
+    max-width: 400px;
+    border: 1px solid bisque;
+    border-radius: 20px;
+    padding: 20px;
+}
+.form__title{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.form__input-item{
+    display: block;
+    margin-bottom: 25px;
+    
+}
+.form__input-text{
+    display: block;
+    margin-bottom: 10px;
+}
+.error-text{
+    font-size: 16px;
+    color: lightcoral;
+}
+.form__input-text--checkbox{
+   padding-left: 30px;
+   position: relative;
+}
+.form__input-text--checkbox:after{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid bisque;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.form__input-checkbox:checked+.form__input-text--checkbox:after{
+    background-color: darkred;
+}
+
+.form__input{
+    display: block;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: inherit;
+    color: #313131;
+}
+.form__input.error-input{
+    border: 1px solid lightcoral;
+}
+.form__input:focus{
+    box-shadow: 1px 1px 3px bisque, -1px -1px 3px bisque;
+}
+.form__input-error{
+    display: block;
+    color: lightcoral;
+    font-size: 16px;
+}
+.form__submit{
+    padding: 12px 17px;
+    background-color: transparent;
+    border: 1px solid bisque;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    color: inherit;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.form__submit:hover{
+    background-color: #212121;
+}
+.form__submit:focus{
+    background-color: #212121;
+}
+

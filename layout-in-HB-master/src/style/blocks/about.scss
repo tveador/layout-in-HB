@@ -1,0 +1,27 @@
+.about{
+    background: url('../../assets/png/about.png') no-repeat;
+    &__info{
+        margin-right: 145px;
+    }
+    &__content{
+        position: relative;
+        display: flex;
+        padding: 182px 0 144px;
+    }
+    &__title{
+        font-family: "Uni Neue",sans-serif;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+        margin-bottom: 64px;
+        color: var(--white);
+    }
+    &__text{
+        max-width: 724px;
+        font-family: "Uni Neue", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--white)
+    }
+}
+

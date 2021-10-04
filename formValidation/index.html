@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <form class="form js-form">
+        <h1 class="form__title">Валидация формы</h1>
+        <label class="form__input-item">
+            <span class="form__input-text">Имя</span>
+            <input class="form__input" name="name" type="text">
+        </label>
+        <label class="form__input-item">
+            <span class="form__input-text">Фамилия</span>
+            <input class="form__input" name="surname" type="text">
+        </label>
+        <label class="form__input-item">
+            <span class="form__input-text">Пароль</span>
+            <input class="form__input" name="password" type="password">
+        </label>
+        <label class="form__input-item">
+            <span class="form__input-text">Повторите пароль</span>
+            <input class="form__input" name="repeatPassword" type="password">
+        </label>
+        <label class="form__input-item">
+            <input class="form__input-checkbox visually-hidden" name="agree" type="checkbox">
+            <span class="form__input-text form__input-text--checkbox">Согласен на обработку персональных данных.</span>
+        </label>
+        <button class="form__submit">Отправить</button>
+    </form>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
