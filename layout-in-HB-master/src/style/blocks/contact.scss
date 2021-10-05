@@ -1,0 +1,42 @@
+.contact{
+    &__title{
+        font-family: "Uni Neue", sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--white);
+        padding-bottom: 40px;
+        
+    }
+    &__map{
+        display: flex;
+        width: 749px;
+        height: 463px;        
+    
+    }
+    &__row{
+        display: flex;
+    
+
+    }
+
+    &__group{
+        
+        display: flex;
+        flex-direction: column;
+        padding: 62px 127px 0 0  ;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        margin-bottom: 46px;
+    }
+    &__text{
+        font-family: "Uni Neue", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--white);
+       margin-left:28px;
+       width: 211px;
+     
+    }
+}
