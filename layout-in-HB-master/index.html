@@ -451,19 +451,19 @@
                         <form class="form__form js-form" autocomplete="off">
                                     <div class="form__input">
                                         <div class="form__input-text">Имя:</div>
-                                        <input class="form__input-item" name="name" type="text" placeholder="Введите имя">
+                                        <input class="form__input-item" name="name" type="name" id="name" placeholder="Введите имя">
                                     </div>
                                     <div class="form__input">
                                         <div class="form__input-text">Телефон:</div>
-                                        <input class="form__input-item" name="name" type="text" placeholder="+7 (___) ___-__-__">
+                                        <input class="form__input-item" name="phone" type="phone" id="phone" placeholder="+7 (___) ___-__-__">
                                     </div>
                                     <div class="form__input">
                                         <div class="form__input-text">Email:</div>
-                                        <input class="form__input-item" name="name" type="text" placeholder="example@mail.com">
+                                        <input class="form__input-item" name="email" type="email" id="email" placeholder="example@mail.com">
                                     </div>
                                     <div class="form__input">
                                         <div class="form__input-text">Выберите предложение:</div>
-                                        <input class="form__input-item" type="text"  name="name" list="l1">
+                                        <input class="form__input-item" type="select"  name="select" id="select" list="l1">
                                         <datalist class="form__input-item" id="l1">
                                           <option>Предложение1</option>
                                           <option>Предложение2</option>                                              
@@ -495,17 +495,18 @@
     
                                     </div>
                                     <div class="form__checkbox">
-                                        <input class="form__checkbox-button" type="checkbox" id="pesonal">
+                                        <input class="form__checkbox-button" name="personal" type="checkbox" id="pesonal">
                                         <label class="form__checkbox-label"for="pesonal"></label>
                                         <div class="form__checkbox-text">Даю согласие на обработку персональных данных</div> 
-                                    </div>   
-                                <div class="form__button-wrapper">
-                                    <div class="form__button">
-                                        <div class="form__button-text">
-                                            Оставить заявку
-                                        </div>
                                     </div>
-                                </div>
+                                    <class class="form__button-wrapper">
+                                        <button class="form__button">
+                                            <class class="form__button-text">
+                                                Оставить заявку
+                                            </class>
+                                        </button>
+                                    </и>
+                               
                         </form>
                     </div>
                 </div>
