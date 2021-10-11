@@ -33,31 +33,38 @@
     font-size: 18px;
     line-height: 22px;
     margin-right: 25px;
-    &:not(:last-child)::after{
-        content: '/';
-        .header--fixed &{
-            color: var(--green);
+    @media screen and (min-width: $tablet){
+        &:not(:last-child)::after{
+            content: '/';
+            .header--fixed &{
+                color: var(--green);
+            }   
         }
-        
     }
     &-link{
+    color: var(--white);
+    text-decoration: none;
+    @media screen and (min-width: $tablet){
+        margin-right: 8px;
+    }
+    @media screen and (min-width: $dekstop){
+        margin-right: 15px;
+    }
         &:hover{
-            text-decoration: underline;
-            text-underline-offset: 2px;
+            text-decoration: underline 1px;
+            text-underline-offset: 5px;
         }
     }
    
 }
-.header__item-link{
-    color: var(--white);
-    text-decoration: none;
-    margin-right: 15px;
-}
+
 .header__links{
-    display: flex;
+    display: none;
     align-items: flex-end;
     list-style: none;
-
+    @media screen and (min-width: $dekstop){
+        display: flex; 
+    }
 }
 .header__nav{
     display: flex;

@@ -65,7 +65,39 @@
             </div>
         </header>
     </div>
-    <class="main">
+    <main class="main">
+        <div class="modal-wrapper js-modal-wrapper">
+            <div class="modal">
+                <button class="js-close-modal">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.067627" y="26.939" width="38.0975" height="4.23305" rx="2" transform="rotate(-45 0.067627 26.939)" fill="#6BC9BD"/>
+                        <rect x="2.99316" y="0.127197" width="38.0975" height="4.23305" rx="2" transform="rotate(45 2.99316 0.127197)" fill="#6BC9BD"/>
+                        </svg>
+                  </button>
+               
+            <form class="modal__form">
+                <div class="modal__title">
+                    Авторизация
+            </div>
+            <div class="modal__field">
+                <div class="modal__label">Логин</div>
+                <input class="modal__input" type="text" name="" id="" placeholder="Введите логин">
+            </div>
+            <div class="modal__field">
+                <div class="modal__label">Пароль</div>
+                <input class="modal__input" type="text" name="" id="" placeholder="Введите пароль">
+            </div>
+            <div class="modal__button-wrapper">
+                <div class="modal__button">
+                    <button class="modal__button-text">
+                        Отправить
+                    </button>
+                </div>
+            </div>
+            
+             </form>
+            </div>
+        </div>
         <section class="present section--background">
             <div class="container">
                 <div class="swiper present__content">
@@ -94,11 +126,12 @@
                     </div>
                     <div class="swiper-pagination">
                     </div>
-                    <div class="present__button-wrapper">
-                        <div class="present__button">
-                            <div class="present__button-text">
+                    <div class="present__button-wrapper ">
+                        <div class="present__button js-open-modal">
+                            <button class="present__button-text ">
                                 оставить заявку
-                            </div>
+                            </button>
+                            
                         </div>
                     </div>
                 </div>
@@ -497,15 +530,15 @@
                                     <div class="form__checkbox">
                                         <input class="form__checkbox-button" name="personal" type="checkbox" id="pesonal">
                                         <label class="form__checkbox-label"for="pesonal"></label>
-                                        <div class="form__checkbox-text">Даю согласие на обработку персональных данных</div> 
+                                        <span class="form__checkbox-text">Даю согласие на обработку персональных данных</span> 
                                     </div>
-                                    <class class="form__button-wrapper">
-                                        <button class="form__button">
-                                            <class class="form__button-text">
+                                    <div class="form__button-wrapper">
+                                        <div class="form__button">
+                                            <button class="form__button-text">
                                                 Оставить заявку
-                                            </class>
-                                        </button>
-                                    </и>
+                                            </button>
+                                        </div>
+                                    </duv>
                                
                         </form>
                     </div>
@@ -584,7 +617,7 @@
 
                 </div>
             </div>
-        </div>
+        </div>`
     </footer>
 </article>
 </body>

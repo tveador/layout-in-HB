@@ -21,13 +21,13 @@ const formOptions = {
     }
     },
 
-    // personal: {
-    //     message: 'Требуется согласие',
-    //     isValid: function (input) {
-    //         return (input.checked);
-    //     }
+    personal: {
+        message: 'Требуется согласие',
+        isValid: function (input) {
+            return (input.checked);
+        }
 
-    // },
+    },
     email:{
         message:'Поле должно быть заполнено',
         isValid: function(input){
@@ -38,33 +38,25 @@ const formOptions = {
 }
 
 if (form && inputs.length) {
-    //Убираем html5 валидацию
     form.setAttribute('novalidate', 'novalidate')
-    //Создаем моковую функцию, которая отправит данные на сервер
     function sendForm() {
         alert('form is sent!')
     }
-    //Основная функция валидации
     function validate() {
-        //Устанавливаем, что форма валидна. Если переменная не изменится, то так и вернем true
         let formIsValid = true
         inputs.forEach(item => {
             if (!formOptions[item.name].isValid(item)) {
-                //Если функция из настроек формы вернула false, форма невалидна
                 formIsValid = false
-                //И если до этого мы не добавляли класс ошибки и сообщение, то добавляем
                 if (!item.parentNode.querySelector(`.${ERROR_TEXT_CLASS}`)) {
                     item.classList.add(ERROR_INPUT_CLASS)
                     const errorBlock = document.createElement('div')
                     errorBlock.classList.add(ERROR_TEXT_CLASS)
-                    //Текст сообщения тоже берем из настроек формы
                     errorBlock.textContent = formOptions[item.name].message
                     item.parentNode.appendChild(errorBlock)
                 }
             } else {
                 item.classList.remove(ERROR_INPUT_CLASS)
                 const errorBlock = item.parentNode.querySelector(`.${ERROR_TEXT_CLASS}`)
-                //Если блок ошибки есть, удаляем его.
                 if (errorBlock) {
                     item.parentNode.removeChild(errorBlock)
                 }
@@ -73,7 +65,6 @@ if (form && inputs.length) {
         })
         return formIsValid
     }
-    //Функция для обнуления формы. Убираем ошибки, чистим инпуты и убираем лишний обработчик на форме.
     function clearErrors() {
         inputs.forEach(item => {
             item.value = ''
@@ -85,16 +76,12 @@ if (form && inputs.length) {
         })
         form.oninput = null
     }
-    //Функция, которая вызывается непосредственно перед отправкой формы
     form.onsubmit = function (e) {
-        //Отменяем поведение браузера по умолчанию (перезагрузка страницы)
         e.preventDefault()
         if (validate()) {
-            //Если все в порядке, очищаем ошибки и отправляем форму AJAX
             clearErrors()
             sendForm()
         } else {
-            //Если валидация не пройдена - навешиваем ее уже на каждое событие ввода в форму, чтобы пользователь мог отследить исчезновение ошибок.
             form.oninput = function () {
                 validate()
             }

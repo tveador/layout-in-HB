@@ -6,4 +6,4 @@
 @@include('./blocks/offer.js')
 @@include('./blocks/form.js')
 @@include('./blocks/contact.js')
-
+@@include('./blocks/modal.js')
